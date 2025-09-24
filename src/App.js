@@ -25,7 +25,7 @@ function App() {
 
         {/* Header */}
         <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
-          Todo App
+          Todo List
         </h1>
 
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
@@ -51,9 +51,11 @@ function App() {
           </div>
 
           {/* <!-- Empty State --> */}
-          {/* <div class="text-center py-12">
-            <p class="text-gray-500">No tasks yet. Add one above to get started!</p>
-          </div> */}
+          {todos.length === 0 ? (
+            <div class="text-center py-12">
+              <p class="text-gray-500">No tasks yet. Add one above to get started!</p>
+            </div>
+          ) : null}
 
           {/* Task list */}
           <div class="space-y-2">
